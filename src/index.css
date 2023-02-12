@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: none;
+}
+body{
+    /* background-image: url(./images/background-todo.jpg); */
+    background-color: rgb(232, 72, 85);
+    background-position: center;
+    background-size: cover;
+}
+
+/* ------------------------APP CARD COMPONENT------------------------------------- */
+.app-card {
+    background-color: rgb(45,48,71);
+    width: 60%;
+    margin: 100px auto;
+    min-height: 50vh;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.main{
+    padding: 20px 0;
+}
+
+/* ------------------------------------------------HEADER COMPONENT--------------------------------------- */
+header{
+    background-color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h2{
+    color: rgb(232, 72, 85);
+}
+header p {
+    color: rgb(59,66,74);
+    font-size: 0.9rem;
+}
+.header-contents{
+    
+}
+
+/* -----------------------------------------------TODO ITEM---------------------------- */
+.card.item{
+    padding: 0px 0;
+    /* padding-top: 1rem; */
+    transition: all 400ms ease;
+    margin: 2rem auto;
+    border-radius: 1.5rem !important;
+}
+.card.item:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.todo-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.todo-info{
+    display: flex;
+    align-items: center;
+    gap: 1rem ;
+}
+.todo-date{
+    background-color: #ccc;
+    width: 60px;
+    border-top-left-radius: 1.5rem ;
+    padding: 15px;
+    height: 110px !important;
+    text-align: center;
+    line-height: 1.6rem;
+    border-bottom-left-radius: 1.5rem;
+}
+.todo-date.checked{
+    background-color: gray;
+}
+.todo-date.personal{
+    background-color: rgb(255,253,130);
+}
+.todo-date.family{
+    background-color: orange;
+}
+.todo-date.work{
+    background-color: rgb(27, 153, 139);
+}
+.todo-date.school{
+    background-color: rgb(255,155,113);
+}
+.item-contents.checked{
+    text-decoration: line-through;
+    color: gray;
+}
+.item-contents p{
+    margin: 0.7rem 0;
+    font-size: 0.9rem;
+}
+.todo-title{
+    margin-top: 0.5rem;
+}
+.todo-type{
+    border: 2px solid transparent;
+    width: fit-content;
+    padding: 0.2rem 0.5rem;
+    /* margin: 0.6rem 0; */
+}
+.todo-type.checked{
+    border-color: 1px solid gray;
+}
+.todo-type.personal{
+    border-color: rgb(255,253,130);
+}
+.todo-type.family{
+    border-color: orange;
+}
+.todo-type.work{
+    border-color: rgb(27, 153, 139);
+}
+.todo-type.school{
+    border-color: rgb(255,155,113);
+}
+.todo-note{
+    /* margin-bottom: 0.9rem; */
+}
+
+
+/* -------------------------------CARD COMPONENT----------------------------------------- */
+.card {
+    border-radius: 5px;
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-top-left-radius: 1.5rem ;
+    border-bottom-right-radius: 1.5rem;
+    width: 80%;
+}
+.card.reverse{
+    background-color: yellow;
+}
+
+/* -----------------------------------------TODO FORM COMPONENT-------------------------------------------- */
+
+.card.form{
+    padding: 0;
+    padding-top: 1rem;
+    position: relative;
+    height: 270px;
+    margin-bottom: 30px;
+    
+}
+.todo-form h2{
+    text-align: center;
+    /* color: ; */
+    /* margin-top: 9rem; */
+    /* background-color: green; */
+}
+.todo-form input, .todo-form select{
+    display: block;
+    margin: 1.5rem auto;
+    width: 90%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.8rem;
+
+}
+.todo-form button{
+    width:100%;
+    border-bottom-right-radius: 1.5rem;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(232, 72, 85);
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
