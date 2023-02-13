@@ -6,8 +6,21 @@ function TodoForm({handleAdd}) {
     const [title, setTitle]= useState("")
     const [notes, setNotes]= useState("")
     const [type, setType] = useState("")
-    
     const [date, setDate] = useState("")
+    const [message, setMessage] = useState("") 
+    const [isDisabled, setIsDisabled] = useState(false)
+
+    const checkLength = (e) => {
+        if (e.target.value.length > 20){
+            setMessage("The title should not be greater than 20 characters")
+            setIsDisabled(true)
+        }else {
+            setMessage("")
+            setIsDisabled(false)
+        }
+    }
+    
+    
 
     const options = [
         {
@@ -80,7 +93,8 @@ function TodoForm({handleAdd}) {
             <form onSubmit = {handleSubmit} className = "todo-form">
                 <h2>New Task</h2>
                 <div className="input-group">
-                    <input type="text" placeholder= "What do you want to do" onChange={handleChange1} value = {title} required/>
+                    <input type="text" placeholder= "Task Title" onChange={handleChange1} onKeyUp = {checkLength} value = {title} required/>
+                    <p className="message">{message}</p>
                     <input type="text" placeholder = "Add extra notes" onChange = {handleChange2} value = {notes}/>
                     <input type="text" placeholder = "Date for task to be done" 
                         onFocus = {(e) => (e.target.type = "date")} 
@@ -99,7 +113,7 @@ function TodoForm({handleAdd}) {
                     
                         
                     
-                    <button type= "submit">Add Task</button>
+                    <button type= "submit" disabled = {isDisabled} className = {isDisabled ? "disabled" : ""}>Add Task</button>
                 </div>
                 
             </form>
