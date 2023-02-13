@@ -1,6 +1,4 @@
-import SearchTodo from "./SearchTodo"
-
-const Header = () => {
+const Header = ({todos}) => {
 
     const today = new Date()
     const days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
@@ -8,11 +6,13 @@ const Header = () => {
     return (
         <header>
             <div className = "header-contents">
-                <p>{`${days[today.getDay()]} ${today.getDate()}th ${months[today.getMonth()]}, ${today.getFullYear()}`}</p>
                 <h2>Taskeep</h2>
+                <p>{`${days[today.getDay()]} ${today.getDate()}th ${months[today.getMonth()]}, ${today.getFullYear()}`}</p>
             </div>
-            <SearchTodo />
         </header>
+            
+            
+        
     );
 }
  

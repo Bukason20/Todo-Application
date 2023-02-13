@@ -7,7 +7,6 @@ import {v4 as uuidv4} from "uuid"
 
 function AppCard() {
     const [todos, setTodos] = useState(TodoData)
-
     const addTodo = (newTodo) => {
         newTodo.id = uuidv4()
         setTodos([newTodo, ...todos])
@@ -20,9 +19,15 @@ function AppCard() {
         }
         // console.log($(id))
     }
+
+
     return (
         <div className = "app-card">
-            <Header/>
+            
+            <Header todos = {todos}/>
+            
+            
+
             <div className="main">
                 <TodoForm handleAdd = {addTodo}/>
                 <TodoList todos = {todos} handleDelete = {deleteTodo}/>
