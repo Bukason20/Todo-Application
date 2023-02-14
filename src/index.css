@@ -87,7 +87,7 @@ header p {
     border-bottom-left-radius: 1.5rem;
 }
 .todo-date.checked{
-    background-color: gray;
+    background-color: gray !important;
 }
 .todo-date.personal{
     background-color: rgb(255,253,130);
@@ -121,7 +121,7 @@ header p {
     padding: 0.2rem 0.5rem;
 }
 .todo-type.checked{
-    border-color: 1px solid gray;
+    border-color: gray !important;
 }
 .todo-type.personal{
     border-color: rgb(255,253,130);

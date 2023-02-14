@@ -31,12 +31,12 @@ function TodoItem({item, handleDelete}) {
         <Card item = {true}>
             <div className="todo-item">
                 <div className="todo-info">
-                    <p className = {`todo-date ${item.type === "Personal" ? "personal": ""} ${item.type === "Family" ? "family": ""} ${item.type === "Work" ? "work": ""} ${item.type === "School" ? "school": ""} ${item.type === "Sports" ? "sports": ""}` }>
+                    <p className = {`todo-date ${checked ? "checked" : ""} ${item.type === "Personal" ? "personal": ""} ${item.type === "Family" ? "family": ""} ${item.type === "Work" ? "work": ""} ${item.type === "School" ? "school": ""} ${item.type === "Sports" ? "sports": ""}` }>
                         {`${newDate.getDate()} ${month[newDate.getMonth()]} ${newDate.getFullYear()}`}
                     </p>
                     <div className = {`item-contents ${checked && "checked"}`} >
                         <h3 className="todo-title">{item.title}</h3>
-                        <p className= {`todo-type ${item.type === "Personal" ? "personal": ""} ${item.type === "Family" ? "family": ""} ${item.type === "Work" ? "work": ""} ${item.type === "School" ? "school": ""} ${item.type === "Sports" ? "sports": ""}` }>{item.type}</p>
+                        <p className= {`todo-type ${checked ? "checked" : ""} ${item.type === "Personal" ? "personal": ""} ${item.type === "Family" ? "family": ""} ${item.type === "Work" ? "work": ""} ${item.type === "School" ? "school": ""} ${item.type === "Sports" ? "sports": ""}` }>{item.type}</p>
                         <p className="todo-note">{item.notes}</p>
                     </div>
                 </div>
