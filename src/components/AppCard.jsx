@@ -9,8 +9,8 @@ function AppCard() {
     const [todos, setTodos] = useState(TodoData)
     const addTodo = (newTodo) => {
         newTodo.id = uuidv4()
-        setTodos([newTodo, ...todos])
-        
+        newTodo.checked = false
+        setTodos([...todos, newTodo])
     } 
 
     const deleteTodo = (id) => {

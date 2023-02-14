@@ -12,7 +12,7 @@ function TodoList({todos, handleDelete}) {
         <div className = "todo-list">
             {/* <h3>Tasks({todos.length})</h3> */}
             {todos.map((todo, index) => (
-                <TodoItem key = {index} item = {todo} handleDelete={handleDelete}/>
+                <TodoItem key = {index} item = {todo} handleDelete={handleDelete} items = {todos}/>
             ))}
         </div>
     )

@@ -7,7 +7,7 @@ function TodoForm({handleAdd}) {
     const [notes, setNotes]= useState("")
     const [type, setType] = useState("")
     const [date, setDate] = useState("")
-    const [message, setMessage] = useState("") 
+    const [message, setMessage] = useState("")
     const [isDisabled, setIsDisabled] = useState(false)
 
     const checkLength = (e) => {
@@ -69,9 +69,7 @@ function TodoForm({handleAdd}) {
         
     }
 
-    const newDate = (e) => {
-        
-    }
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -80,6 +78,7 @@ function TodoForm({handleAdd}) {
             notes: notes,
             type:type,
             date: date,
+            // checked:checked,
         }
         handleAdd(newTodo)
 
@@ -87,6 +86,7 @@ function TodoForm({handleAdd}) {
         setNotes("")
         setType("")
         setDate("")
+        
     }
     return (
         <Card form = "true">
